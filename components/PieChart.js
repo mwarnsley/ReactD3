@@ -10,18 +10,20 @@ const PiePaths = React.createClass({
     render(){
 
       const data = [
-          { name: 'IE', count: 40 },
-          { name: 'Chrome', count: 32 },
-          { name: 'Safari', count: 14 },
-          { name: 'Firefox', count: 9 },
-          { name: 'Others', count: 6 }
-        ],
+              {"day":"Mon", "hits": 476},
+              {"day":"Tue", "hits": 678},
+              {"day":"Wed", "hits": 567},
+              {"day":"Thur", "hits": 425},
+              {"day":"Fri", "hits": 387},
+              {"day":"Sat", "hits": 1025},
+              {"day":"Sun", "hits": 978}
+            ],
             arc = d3.svg.arc()
                     .outerRadius(0)
                     .innerRadius(300),
             pie = d3.layout.pie()
                     .value((d) =>{
-                      return d.count
+                      return d.hits
                     }),
             color = d3.scale.ordinal()
                     .range([
